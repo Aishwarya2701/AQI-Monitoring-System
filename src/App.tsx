@@ -1,12 +1,17 @@
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import Background3D from './components/Background3D';
 import AQISection from './components/AQISection';
+import Navbar from './components/Navbar';
+import About from './pages/About';
+import Gallery from './pages/Gallery';
+import Motivation from './pages/Motivation';
 import { GithubIcon, LinkedinIcon, YoutubeIcon } from 'lucide-react';
 
-function App() {
+function HomePage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50">
+    <>
       <Background3D />
       
       {/* Hero Section */}
@@ -80,6 +85,21 @@ function App() {
           </motion.p>
         </div>
       </section>
+    </>
+  );
+}
+
+function App() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50">
+      <Navbar />
+      
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/motivation" element={<Motivation />} />
+        <Route path="/gallery" element={<Gallery />} />
+      </Routes>
 
       {/* Footer */}
       <footer className="bg-blue-900 text-white py-8">
