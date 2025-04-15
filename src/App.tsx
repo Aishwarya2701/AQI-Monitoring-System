@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Background3D from './components/Background3D';
 import AQISection from './components/AQISection';
-import { GithubIcon, LinkedinIcon } from 'lucide-react';
+import { GithubIcon, LinkedinIcon, YoutubeIcon } from 'lucide-react';
 
 function App() {
   return (
@@ -95,6 +95,14 @@ function App() {
               </a>
               <a href="#" className="hover:text-blue-300 transition-colors">
                 <LinkedinIcon />
+              </a>
+              <a 
+                href="https://youtu.be/t4Xl7QlxtAw?si=Mh25cSMWAtfOe6JS" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="hover:text-blue-300 transition-colors"
+              >
+                <YoutubeIcon />
               </a>
             </div>
           </div>
